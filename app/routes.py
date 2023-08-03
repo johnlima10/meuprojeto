@@ -8,7 +8,11 @@ def index():
     #return "Olá mundo"
     return render_template('index.html',titulo = 'Página inicial')
 
-@app.route('/projetos')
-def projetos():
+@app.route('/contatos')
+def contatos():
     #return "Projetos"
-    return render_template('projetos.html',titulo = 'Projetos')
+    return render_template('contatos.html',titulo = 'Contatos')
+
+@app.route('/sobre')
+def sobre():
+    return render_template('sobre.html',titulo = 'Sobre')
