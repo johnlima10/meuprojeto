@@ -1,7 +1,40 @@
 {% extends 'base.html' %}
 {% block conteudo %}
-<section class="section">
-    <h2>Contato</h2>
-    <p>Conteúdo de contatos</p>
+<section class="contato">
+    <div class="container">
+        <h2>Entre em Contato</h2>
+        <p>Estamos ansiosos para te ouvir. Preencha o formulário abaixo ou utilize os meios de contato fornecidos.</p>
+        <div class="contato-wrapper">
+            <form class="formulario">
+                <div class="campo-formulario">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="campo-formulario">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="campo-formulario">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-enviar">Enviar Mensagem</button>
+            </form>
+            <div class="informacoes-contato">
+                <div class="contato-item">
+                    <h3>Email</h3>
+                    <p>progsistemas@engdacomputacao.com</p>
+                </div>
+                <div class="contato-item">
+                    <h3>Telefone</h3>
+                    <p>(84) 6234-5678</p>
+                </div>
+                <div class="contato-item">
+                    <h3>Endereço</h3>
+                    <p>Av. Sen. Salgado Filho, 123<br>Natal, Rio Grande do Norte</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 {% endblock %}
