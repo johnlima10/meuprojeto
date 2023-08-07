@@ -26,10 +26,16 @@ Ativar máquina virtual no windows
 nomedamaquinavirtual\Scripts\activate
 ```
 Quarto passo:
-Instalar o flask
+Instalar bibliotecas
 
 ```bash
-pip install flask
+pip install -r dependencias.txt
+```
+Quinto passo:
+Atualizou o projeto?
+
+```bash
+pip freeze > dependencias.txt
 ```
 ## Autores
 

@@ -1,5 +1,6 @@
 from app import app
 from flask import render_template
+from app.forms import Contato
 
 @app.route('/')
 #@app.route('/index')
@@ -8,10 +9,26 @@ def index():
     #return "Olá mundo"
     return render_template('index.html',titulo = 'Página inicial')
 
-@app.route('/contatos')
+@app.route('/contatos', methods=['POST', "GET"])
 def contatos():
+    dados_formulario = None
+    formulario = Contato()
+    print('Acessou a rota contatos!')
+    if formulario.validate_on_submit():
+        print('O formulario foi validado!')
+        nome = formulario.nome.data
+        email = formulario.email.data
+        telefone = formulario.telefone.data
+        mensagem = formulario.mensagem.data
+
+        dados_formulario = {
+            'nome': nome,
+            'email': email,
+            'telefone': telefone,
+            'mensagem': mensagem
+        }
     #return "Projetos"
-    return render_template('contatos.html',titulo = 'Contatos')
+    return render_template('contatos.html', titulo = 'Contatos',formulario = formulario,dados_formulario = dados_formulario)
 
 @app.route('/sobre')
 def sobre():
