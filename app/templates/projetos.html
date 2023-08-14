@@ -1,27 +1,30 @@
 {% extends 'base.html' %}
+
 {% block conteudo %}
-<section class="projetos">
+<section class="projetos py-5">
     <div class="container">
-        <div class="projeto">
-            <h2>Projeto X</h2>
-            <p>Desenvolvimento de um aplicativo móvel inovador que facilita o gerenciamento de tarefas diárias. Utiliza tecnologias modernas como React Native e integração com API RESTful.</p>
-            <a href="#" class="btn-saiba-mais">Saiba Mais</a>
-        </div>
-        
-        <div class="espaco-entre-projetos"></div>
-        
-        <div class="projeto">
-            <h2>Projeto Y</h2>
-            <p>Criação de um site responsivo para uma loja de produtos artesanais. Design atraente e funcionalidades de carrinho de compras implementadas com JavaScript e CSS flexbox.</p>
-            <a href="#" class="btn-saiba-mais">Saiba Mais</a>
-        </div>
-        
-        <div class="espaco-entre-projetos"></div>
-        
-        <div class="projeto">
-            <h2>Projeto Z</h2>
-            <p>Desenvolvimento de um sistema de gerenciamento de eventos corporativos. Interface intuitiva para cadastro de eventos, controle de participantes e geração de relatórios.</p>
-            <a href="#" class="btn-saiba-mais">Saiba Mais</a>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="projeto-card bg-black text-white rounded p-4">
+                    <h2 class="h3">Projeto X</h2>
+                    <p>Desenvolvimento de um aplicativo móvel inovador que facilita o gerenciamento de tarefas diárias. Utiliza tecnologias modernas como React Native e integração com API RESTful.</p>
+                    <a href="#" class="btn btn-saiba-mais btn-red">Saiba Mais</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="projeto-card bg-black text-white rounded p-4">
+                    <h2 class="h3">Projeto Y</h2>
+                    <p>Criação de um site responsivo para uma loja de produtos artesanais. Design atraente e funcionalidades de carrinho de compras implementadas com JavaScript e CSS flexbox.</p>
+                    <a href="#" class="btn btn-saiba-mais btn-red">Saiba Mais</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="projeto-card bg-black text-white rounded p-4">
+                    <h2 class="h3">Projeto Z</h2>
+                    <p>Desenvolvimento de um sistema de gerenciamento de eventos corporativos. Interface intuitiva para cadastro de eventos, controle de participantes e geração de relatórios.</p>
+                    <a href="#" class="btn btn-saiba-mais btn-red">Saiba Mais</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>

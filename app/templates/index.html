@@ -1,38 +1,45 @@
 {% extends 'base.html' %}
+
 {% block conteudo %}
 <section class="hero">
     <div class="hero-content">
-        <h1>Bem-vindo ao Universo da Programação</h1>
-        <p>Explorando, Aprendendo, Inovando</p>
-        <a href="#destaques" class="btn">Começar</a>
+        <h1 class="display-4">Bem-vindo ao Universo da Programação</h1>
+        <p class="lead">Explorando, Aprendendo, Inovando</p>
+        <a href="#destaques" class="btn btn-primary btn-lg">Começar</a>
     </div>
 </section>
-<section id="destaques" class="destaque">
+<section id="destaques" class="destaque py-5">
     <div class="container">
-        <div class="destaque-item">
-            <h2>Descubra Novas Fronteiras</h2>
-            <p>Explore as tendências mais recentes em programação e tecnologia, e mantenha-se atualizado com o mundo em constante evolução.</p>
-            <a href="/novidades" class="btn">Explorar</a>
-        </div>
-        <div class="destaque-item">
-            <h2>Aprenda com Tutoriais Práticos</h2>
-            <p>Desenvolva suas habilidades com nossos tutoriais passo a passo, projetados para ajudá-lo a dominar novas tecnologias e conceitos.</p>
-            <a href="/tutoriais" class="btn">Ver Tutoriais</a>
-        </div>
-        <div class="destaque-item">
-            <h2>Conheça Nossa Equipe</h2>
-            <p>Saiba mais sobre os apaixonados desenvolvedores por trás deste site e descubra nossa jornada rumo à excelência técnica.</p>
-            <a href="/sobre" class="btn">Sobre Nós</a>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="destaque-item text-center">
+                    <h2>Descubra Novas Fronteiras</h2>
+                    <p>Explore as tendências mais recentes em programação e tecnologia, e mantenha-se atualizado com o mundo em constante evolução.</p>
+                    <a href="/novidades" class="btn btn-primary">Explorar</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="destaque-item text-center">
+                    <h2>Aprenda com Tutoriais Práticos</h2>
+                    <p>Desenvolva suas habilidades com nossos tutoriais passo a passo, projetados para ajudá-lo a dominar novas tecnologias e conceitos.</p>
+                    <a href="/tutoriais" class="btn btn-primary">Ver Tutoriais</a>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="destaque-item text-center">
+                    <h2>Conheça Nossa Equipe</h2>
+                    <p>Saiba mais sobre os apaixonados desenvolvedores por trás deste site e descubra nossa jornada rumo à excelência técnica.</p>
+                    <a href="/sobre" class="btn btn-primary">Sobre Nós</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
-<section class="sobre">
+<section class="sobre py-5">
     <div class="container">
-        <h2>Bem-Vindo ao Nosso Mundo Digital</h2>
-        <p>Somos uma comunidade dedicada a compartilhar conhecimento, inspirar criatividade e colaborar para criar soluções inovadoras.</p>
+        <h2 class="display-4">Bem-Vindo ao Nosso Mundo Digital</h2>
+        <p class="lead">Somos uma comunidade dedicada a compartilhar conhecimento, inspirar criatividade e colaborar para criar soluções inovadoras.</p>
         <p>Explore nossos recursos, participe de discussões e desafie-se a crescer como desenvolvedor.</p>
     </div>
 </section>
 {% endblock %}
-
-

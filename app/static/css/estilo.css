@@ -8,7 +8,7 @@
 /* Estilos globais */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f6f6f6;
+    background-color: #f0f7fc;
     color: #333;
 }
 
@@ -20,7 +20,7 @@ body {
 
 /* Estilos do cabeçalho */
 header {
-    background-color: #333;
+    background-color: #1a237e;
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -33,7 +33,7 @@ header h1 {
 
 /* Estilos da barra de navegação */
 nav {
-    background-color: #444;
+    background-color: #283593;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -78,6 +78,8 @@ nav a:hover {
     margin-bottom: 20px;
     text-align: center;
     transition: transform 0.3s;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .destaque-item:hover {
@@ -85,7 +87,7 @@ nav a:hover {
 }
 
 .destaque-item h2 {
-    color: #333;
+    color: #1a237e;
     font-size: 24px;
     margin-bottom: 10px;
 }
@@ -120,7 +122,7 @@ nav a:hover {
 .sobre h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #333;
+    color: #1a237e;
 }
 
 .sobre-cards {
@@ -148,7 +150,7 @@ nav a:hover {
 }
 
 .sobre-card h3 {
-    color: #333;
+    color: #1a237e;
     font-size: 24px;
     margin-bottom: 10px;
 }
@@ -157,13 +159,6 @@ nav a:hover {
     color: #666;
     font-size: 16px;
     line-height: 1.6;
-}
-
-/* Estilos dos ícones nos cards */
-.sobre-icon {
-    font-size: 40px;
-    margin-bottom: 10px;
-    color: #ff8c00;
 }
 
 /* Estilos dos ícones nos cards */
@@ -183,7 +178,7 @@ nav a:hover {
 .contato h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #333;
+    color: #1a237e;
 }
 
 .contato p {
@@ -229,7 +224,7 @@ nav a:hover {
 .btn-enviar {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #337ab7;
+    background-color: #1a237e;
     color: #fff;
     text-decoration: none;
     border-radius: 4px;
@@ -238,13 +233,13 @@ nav a:hover {
 }
 
 .btn-enviar:hover {
-    background-color: #286090;
+    background-color: #111;
 }
 
 /* Estilos da seção de Projetos */
 .projetos {
     padding: 80px 0;
-    background-color: #f6f6f6;
+    background-color: #f0f7fc;
     text-align: center;
 }
 
@@ -268,7 +263,7 @@ nav a:hover {
 .projeto h2 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #333;
+    color: #1a237e;
 }
 
 .projeto p {
@@ -296,7 +291,7 @@ nav a:hover {
 
 /* Estilos do rodapé */
 footer {
-    background-color: #333;
+    background-color: #1a237e;
     color: #fff;
     text-align: center;
     padding: 20px 0;
