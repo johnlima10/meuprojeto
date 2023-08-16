@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<section class="contato">
+    <div class="container">
+        <h2>Cadastre-se</h2>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for mensagem in messages %}
+                <div class="alert alert-success" role="alert">
+                    {{ mensagem }}
+                </div>                    
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <p>Preencha o formulário abaixo para criar uma conta.</p>
+        <div class="contato-wrapper">
+            <form action="" class="formulario" method="post">
+                {{ cadastro.csrf_token }}
+                <div class="campo-formulario">
+                    <label for="nome">Nome:</label>
+                    {{ cadastro.nome }}
+                </div>
+                <div class="campo-formulario">
+                    <label for="sobrenome">Sobrenome:</label>
+                    {{ cadastro.sobrenome }}
+                </div>
+                <div class="campo-formulario">
+                    <label for="email">Email:</label>
+                    {{ cadastro.email }}
+                </div>
+                <div class="campo-formulario">
+                    <label for="senha">Senha:</label>
+                    {{ cadastro.senha }}
+                </div>
+                {{ cadastro.enviar }}
+            </form>
+            <div class="informacoes-contato">
+                <!-- Você pode remover esta parte se não for necessária no formulário de cadastro -->
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,40 +1,29 @@
-from app import app
+from app import app, db
 from flask import render_template, url_for, request, flash
-from app.forms import Contato
+from app.forms import Contato, Cadastro
+from app.models import ContatoModel, CadastroModel
 
 @app.route('/')
-#@app.route('/index')
 
 def index():
-    #return "Olá mundo"
     return render_template('index.html',titulo = 'Página inicial')
 
-@app.route('/contatos', methods=['POST', "GET"])
+@app.route('/contatos', methods=['POST', 'GET'])
 def contatos():
-    dados_formulario = None
     formulario = Contato()
     print('Acessou a rota contatos!')
     if formulario.validate_on_submit():
-        
+        flash('Seu formulario foi enviado com sucesso!')
         nome = formulario.nome.data
         email = formulario.email.data
         telefone = formulario.telefone.data
         mensagem = formulario.mensagem.data
-        print('O formulario foi validado!')
-        print(nome)
-        print(email)
-        print(telefone)
-        print(mensagem)
 
-
-        dados_formulario = {
-            'nome': nome,
-            'email': email,
-            'telefone': telefone,
-            'mensagem': mensagem
-        }
-    #return "Projetos"
-    return render_template('contatos.html', titulo = 'Contatos',formulario = formulario,dados_formulario = dados_formulario)
+        novo_contato = ContatoModel(nome=nome,email=email,telefone=telefone,mensagem=mensagem)
+        db.session.add(novo_contato)
+        db.session.commit()
+         
+    return render_template('contatos.html', titulo = 'Contatos',formulario = formulario)
 
 @app.route('/sobre')
 def sobre():
@@ -47,3 +36,26 @@ def projetos():
 @app.route('/teste')
 def teste():
     return render_template('teste.html',titulo = 'Teste')
+
+@app.route('/cadastro', methods=['POST', 'GET'])
+def cadastro():
+    cadastro = Cadastro()
+    print('Acessou a rota de cadastro!')
+    if cadastro.validate_on_submit():
+        flash('Seu cadastro foi enviado com sucesso!')
+        nome = cadastro.nome.data
+        sobrenome = cadastro.sobrenome.data
+        email = cadastro.email.data
+        telefone = cadastro.telefone.data
+        senha = cadastro.senha.data
+        
+        novo_cadastro = CadastroModel(nome=nome,sobrenome=sobrenome,email=email,telefone=telefone,senha=senha)
+        db.session.add(novo_cadastro)
+        db.session.commit()
+         
+    return render_template('cadastro.html', titulo = 'Cadastre-se',cadastro = cadastro)
+
+@app.route('/login')
+def login():
+    return render_template('login.html',titulo = 'Login')
+

@@ -8,7 +8,7 @@
 /* Estilos globais */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f7fc;
+    background-color: #fff; /* Fundo branco */
     color: #333;
 }
 
@@ -20,7 +20,7 @@ body {
 
 /* Estilos do cabeçalho */
 header {
-    background-color: #1a237e;
+    background-color: #000; /* Preto */
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -33,7 +33,7 @@ header h1 {
 
 /* Estilos da barra de navegação */
 nav {
-    background-color: #283593;
+    background-color: #000; /* Preto */
     color: #fff;
     display: flex;
     justify-content: center;
@@ -49,7 +49,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ff8c00;
+    color: #666; /* Cinza mais escuro */
 }
 
 /* Estilos do conteúdo principal */
@@ -58,11 +58,34 @@ nav a:hover {
     padding: 60px 0;
 }
 
-.banner img {
-    max-width: 100%;
-    height: auto;
+.banner h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #000; /* Preto */
 }
 
+.banner p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.banner .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000; /* Preto */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.banner .btn:hover {
+    background-color: #666; /* Cinza mais escuro */
+}
+
+/* Estilos da seção "Destaques" */
 .destaque {
     display: flex;
     flex-wrap: wrap;
@@ -87,7 +110,7 @@ nav a:hover {
 }
 
 .destaque-item h2 {
-    color: #1a237e;
+    color: #000; /* Preto */
     font-size: 24px;
     margin-bottom: 10px;
 }
@@ -100,7 +123,7 @@ nav a:hover {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #ff8c00;
+    background-color: #000; /* Preto */
     color: #fff;
     text-decoration: none;
     border-radius: 4px;
@@ -109,7 +132,7 @@ nav a:hover {
 }
 
 .btn:hover {
-    background-color: #ff6600;
+    background-color: #666; /* Cinza mais escuro */
 }
 
 /* Estilos da seção "Sobre" */
@@ -122,7 +145,7 @@ nav a:hover {
 .sobre h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #1a237e;
+    color: #000; /* Preto */
 }
 
 .sobre-cards {
@@ -150,7 +173,7 @@ nav a:hover {
 }
 
 .sobre-card h3 {
-    color: #1a237e;
+    color: #000; /* Preto */
     font-size: 24px;
     margin-bottom: 10px;
 }
@@ -165,20 +188,20 @@ nav a:hover {
 .sobre-icon {
     font-size: 40px;
     margin-bottom: 10px;
-    color: #ff8c00;
+    color: #000; /* Preto */
 }
 
 /* Estilos da seção "Contato" */
 .contato {
     padding: 80px 0;
-    background-color: #f8f8f8;
+    background-color: #fff;
     text-align: center;
 }
 
 .contato h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #1a237e;
+    color: #000; /* Preto */
 }
 
 .contato p {
@@ -224,7 +247,7 @@ nav a:hover {
 .btn-enviar {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #1a237e;
+    background-color: #000; /* Preto */
     color: #fff;
     text-decoration: none;
     border-radius: 4px;
@@ -233,13 +256,13 @@ nav a:hover {
 }
 
 .btn-enviar:hover {
-    background-color: #111;
+    background-color: #666; /* Cinza mais escuro */
 }
 
 /* Estilos da seção de Projetos */
 .projetos {
     padding: 80px 0;
-    background-color: #f0f7fc;
+    background-color: #fff;
     text-align: center;
 }
 
@@ -249,8 +272,8 @@ nav a:hover {
     align-items: center;
     margin-bottom: 40px;
     padding: 20px;
-    border: 1px solid #e0e0e0;
-    background-color: #fff;
+    border: 1px solid #ccc; /* Cinza mais claro */
+    background-color: #f7f7f7; /* Cinza claro */
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
@@ -263,12 +286,12 @@ nav a:hover {
 .projeto h2 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #1a237e;
+    color: #000; /* Preto */
 }
 
 .projeto p {
     font-size: 16px;
-    color: #666;
+    color: #555; /* Cinza mais escuro */
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto 20px;
@@ -277,7 +300,7 @@ nav a:hover {
 .btn-saiba-mais {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #ff8c00;
+    background-color: #000; /* Preto */
     color: #fff;
     text-decoration: none;
     border-radius: 4px;
@@ -286,12 +309,12 @@ nav a:hover {
 }
 
 .btn-saiba-mais:hover {
-    background-color: #ff6600;
+    background-color: #333; /* Preto mais escuro */
 }
 
 /* Estilos do rodapé */
 footer {
-    background-color: #1a237e;
+    background-color: #000; /* Preto */
     color: #fff;
     text-align: center;
     padding: 20px 0;

@@ -3,9 +3,18 @@
 <section class="contato">
     <div class="container">
         <h2>Entre em Contato</h2>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for mensagem in messages %}
+                <div class="alert alert-success" role="alert">
+                    {{ mensagem }}
+                </div>                    
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
         <p>Estamos ansiosos para te ouvir. Preencha o formulário abaixo ou utilize os meios de contato fornecidos.</p>
         <div class="contato-wrapper">
-            <form class="formulario">
+            <form action="" class="formulario" method="post">
                 {{ formulario.csrf_token }}
                 <div class="campo-formulario">
                     <label for="nome">Nome:</label>
