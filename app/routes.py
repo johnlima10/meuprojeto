@@ -46,10 +46,9 @@ def cadastro():
         nome = cadastro.nome.data
         sobrenome = cadastro.sobrenome.data
         email = cadastro.email.data
-        telefone = cadastro.telefone.data
         senha = cadastro.senha.data
         
-        novo_cadastro = CadastroModel(nome=nome,sobrenome=sobrenome,email=email,telefone=telefone,senha=senha)
+        novo_cadastro = CadastroModel(nome=nome,sobrenome=sobrenome,email=email,senha=senha)
         db.session.add(novo_cadastro)
         db.session.commit()
          
