@@ -2,6 +2,15 @@
 {% block conteudo %}
 <section class="login">
     <div class="container">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for mensagem in messages %}
+                <div class="alert alert-success" role="alert">
+                    {{ mensagem }}
+                </div>                    
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
         <h2>Login</h2>
         <div class="login-form">
             <form action="/login" method="post">
